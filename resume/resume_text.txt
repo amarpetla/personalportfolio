@@ -1,0 +1,116 @@
+Amar PetlaStaff Data &AI EngineeringSenior Data & AI Architect | Snowflake Cortex | GCP Big Data Stack | Cloud-Native &API-Driven PlatformsResults-driven Staff Data Engineer and Architect with 13+ years of experiencedesigning and implementing enterprise-scale data, AI, and analytics platforms acrossGCP, Azure, and AWS. Proven expertise in building robust, scalable big data solutionsusing BigQuery, DataProc, Airflow, Pub/Sub, Spark, Hive, and Kafka, with strongproficiency in Python, Java, and Shell scripting.Hands-on experience developing microservices and RESTful APIs using Java andSpring Boot, enabling flexible, service-oriented data platforms. Deep technicalleadership in delivering AI/ML-driven systems leveraging Snowflake Cortex, Snowpark,LLMs, RAG pipelines, semantic search, and vector embeddings to enable intelligent,real-time decisioning.Architected and optimized large-scale data pipelines, CI/CD workflows (Jenkins,GitHub Actions, XLR), and observability frameworks supporting 99.9% system uptime.Strong background in data modeling, distributed systems, and event-drivenarchitecture, with a continuous focus on performance, governance, and operationalexcellence.Trusted advisor and agile leader, known for mentoring teams, aligning business andtechnical strategies, and driving innovation across 8+ concurrent high-impactprojects. Passionate about building end-to-end cloud-native platforms that turnbusiness vision into data-driven, AI-enabled solutions.EXPERIENCE HIGHLIGHTSOver the past 3+ years, I have led cross-functional teams and drivenorganizational goals by leveraging IT shared services. My collaboration withbusinesses and other domains ensured that data and architectural solutionsmet customer needs through reporting, analytics, digital marketing, and otherresources. I developed a comprehensive data and AI strategy aligned withthe organization's objectives, identified areas where data analytics and AIcould drive innovation and improve decision-making, and created aroadmap for these initiatives. I led the development of data engineering andmachine learning models, collaborated with software development teams tointegrate AI solutions, and led the CoE for Technology innovation and productdevelopment to enhance enterprise data assets.Peoria, United States 85382(480) 619-1143amarnadh87@gmail.comhttps://www.linkedin.com/in/amar-petla/
+SkillsCloud Platforms - Azure, GCP, RedHat OpenStackand OpenShift, AWSCloud Services - Snowflake,Google Big Query,Google cloud storage, google Composer,Google Vertex AI,Google Cloud Build,S3, Glue,EC2,lambda functionsKnowledge ETL Tools - Ab Initio, TeradataMonitoring – Splunk,Grafana,Datadog,AirflowScripting Languages – Shell ScriptProgramming Languages and Frameworks -Java, J2EE, Spring boot, REST, PythonBig Data - Hadoop, Map Reduce, Sqoop, Hive,Apache SparkNoSQL & RDBMS - Apache HBASE, Mapr-DB,Mem-SQL, Couchbase, PostgreSQL,MySQL,MariadbStreaming Technologies - Solace, Kafka, SparkStreamingScheduling Tools - AutoSys, Oozie,Event Engine,RMJ, DBT.Data quality and data governance - CollibraData Management: Data Modeling,DataWarehousing,Data Pipeline Design,Data QualityAssurance,Data GovernanceML / AI : Machine Learning, AIData Science Tools: Python, R, Jupyter,TensorFlow, PyTorch, Scikit-Learn, Pandas, NumPy,SQLLeadership: Technology leadership work streamsWork History
+2023-09 - CurrentStaff EngineerFreeport Mcmoran, PHOENIXArchitected scalable data platforms across Azure, Snowflake, and GCP,supporting enterprise initiatives including PROD ACCT, FINWIP, HTOS, andHELENA.
+•Designed hybrid Snowflake schemas with clustering, materialized views,and Query Acceleration Service (QAS) to optimize performance and cost.
+•Built ELT pipelines using Azure Data Factory, Snowflake Tasks/Streams, andPython orchestration, ingesting 100M+ daily records from Event Hub, APIs,
+•
+and on-prem systems.Developed Spark-based ingestion flows using the Snowflake SparkConnector for schema-aware, secure data movement betweenDatabricks and Snowflake.
+•Leveraged Snowpark Python and Snowpark ML for scalable ML pipelinesand feature engineering within Snowflake.
+•Created Java microservices for real-time ingestion from Azure Event Hub toSnowflake using Kafka Connect + Snowflake Sink Connector.
+•Implemented Snowflake Streams and Dynamic Tables for near real-timeanalytics and automated materialization.
+•Integrated Snowflake Cortex functions (SUMMARIZE, CLASSIFY, EMBED_TEXT)into GenAI prototypes for intelligent automation and LLM-based insights.
+•Built Retrieval-Augmented Generation (RAG) pipelines to enhance LLM-based retrieval and summarization.
+•Established observability frameworks using Azure Monitor, SnowflakeAccount Usage, and custom logging pipelines.
+•Tuned Snowflake workloads with auto-suspend/resume, multi-clusterwarehouses, and cost diagnostics.
+•Developed Spring Boot REST APIs and Java-based metadata services,secured via OAuth 2.0 / Azure AD.
+•Led CI/CD pipeline design using GitHub Actions, Jenkins, and Terraformwith automated testing and SonarQube scanning.
+•Mentored a team of 6+ engineers, aligning delivery to quarterly OKRs androadmap priorities.
+•Contributed to Freeport's Analytics 4 Everyone (A4E) program andSnowflake Technical Syncs, shaping architecture and training.
+•
+2022-06 - 2023-09Staff Data EngineerAchieve (Freedom Financial Network ), Tempe, AZBuilt and optimized large-scale data pipelines on GCP, handling 10B+ dailyevents across batch and streaming systems using BigQuery, DataProc,Airflow, and Pub/Sub.
+•Designed and implemented Spark-based ETL frameworks and Pythonworkflows, reducing end-to-end pipeline latency by 35% and significantlyimproving SLA compliance.
+•Led reengineering of legacy workflows to adopt event-driven architectureusing Kafka and GCP Pub/Sub, enhancing system throughput andresilience.
+•Developed and managed Airflow DAGs using custom Python operators toorchestrate GBQ ETL operations with precise scheduling, monitoring, anderror handling.
+•Engineered BigQuery models to support cost analytics, client engagementmetrics, and retail performance across structured and semi-structureddatasets (CSV, JSON, Cloud Storage, relational sources).
+•Delivered interactive Tableau dashboards and data sources, enabling self-serve analytics and supporting executive-level reporting on marketingcosts (Google Ads) and campaign performance.
+•Created robust data ingestion pipelines to import/export data betweenGBQ and external systems, ensuring schema alignment, data cleansing,
+•
+and metadata propagation.Analyzed large datasets and wrote complex SQL queries to extract keyinsights from GBQ, enabling real-time decision support for business andproduct teams.
+•Built and deployed end-to-end machine learning pipelines using Vertex AI,Kubeflow, and BigQuery ML datasets, including model training,hyperparameter tuning, and model evaluation workflows.
+•Developed data preparation pipelines for ML training, performingadvanced data cleaning, transformation, feature selection, and labeling inPython.
+•Applied advanced SQL partitioning, clustering, and materialized views tooptimize GBQ model performance and reduce query costs.
+•Partnered with product owners and business stakeholders to translateroadmap features into scalable technical solutions with measurablebusiness impact.
+•Supported enterprise-wide data governance efforts by ensuring lineagetracking, data quality monitoring, and observability metrics across criticalpipelines.
+•Championed Agile development methodologies—led sprint planning, peercode reviews, and enforced test-driven development (TDD) within aJenkins-based CI/CD deployment framework.
+•Mentored junior data engineers, conducting knowledge-sharing sessions onGCP architecture, Python performance optimization, Spark tuning, andmodern data modeling techniques.
+•
+2021-12 - 2022-06Sr.Bigdata EngineerJPMorgan Chase, Plano, TXDesign and Developed Rest API using spring boot where upload customData dictionaries to Collibra-Digital Transformation tool for NoSQLdatabases Using Collibra Spring boot Integration.
+•Design and developed recon framework which monitorInbound/outbound dataflow using pyspark.
+•Working on AWS migration from existing platorm (hadoop) to AWS.
+•Created CICD pipelines.
+•
+2015-10 - 2021-11Sr.Big Data Engineer I Solution ArchitectAmerican Express, Phoenix, AZProject: Trinity
+•This project is joint effort to support seamless electronic solution from BuyerPurchase Order to payment settlement processes for e-Catalog transactionon Marketplaces such as Amazon Business. The requirements within thisdocument are specific to processes among Buyer, Amazon Business andAmerican Express.
+•
+Responsibilities:
+•Developed Spark code using python and Spark-SQL for processing of data
+•Load Order Confirmation, Purchase order and Invoice cXML in PostgreSQLDatabase using Spring.
+•Experienced in cloud Technologies like OpenShift for deploying andmaintaining jobs.
+•
+Project: Jungle LidProject: MYDATAExperienced with PostgreSQL and working with and maintaining in aproduction environment.
+•Experienced with cloud Technologies (OpenShift) anddevelopment/deployment in cloud infrastructure.
+•Developed Kafka producers and consumer using spring boot.
+•Experienced in handling large datasets using Partitions, Spark in Memorycapabilities, Effective & efficient Joins, Transformations during ingestionprocess from spark dataframes.
+•Implemented Partitioning, Dynamic Partitions, Buckets in HIVE.
+•Exposure in Spark program performance improvement and tuning of SparkSQL, Hive queries.
+•The project JungleLid objective is Enable reporting of b2b(amazon)transactions with line-Item Detail data to card members via MYCA (UI) insupport of E2E Jungle program. Reporting accomplished via CSV file atcycle cut for billed transactions to be downloaded from MYCA byclient/card member for import to quick books or similar client side software.Also solving for service to MYCA so LID can be displayed on user screenwhen viewing transactions for both billed and unbilled and requesting tosee LID detail.
+•
+Responsibilities:
+•Developed Spark code using Scala and Spark-SQL for processing of data.
+•Load complex Json data in to Hbase table from Spark Dataframe usingSparkHbaseConnector (SHC), SQL insert into Hive table with HBase storageand RDD.saveAsNewAPIHaoopDataset.
+•Worked on converting Hive queries into Spark transformations using SparkRDDs.
+•Experience in Job management for scheduling and developed jobprocessing scripts using EVENT ENGINE (Internal).
+•Designed and developed test framework for Data comparison in hivetables and which generates report using Jenkins tools (Internal tool usingJenkins)
+•Load data into Spark Dataframes and performed in-memory datacomputation to generate output response.
+•Implemented Scoverage for Scala code coverage and Scalastyle forcoding standard with automated control Using Maven tool.
+•Developed Watch Dog scripts to monitor applications and sendnotifications if required.
+•Performed Data Orchestration for transactional, incremental tables bydividing these into different categories and joining them to form largebuckets.
+•Implemented Hive Generic UDF's to implemented business logic aroundcustom data types.
+•Implemented Partitioning, Dynamic Partitions, Buckets in HIVE.
+•The project MyData objective is to build functional application with user-friendly UI where users can manage content, format and delivery of datafiles that American Express provides to Global Commercial Payments
+•
+Responsibilities:customers. MyData has been designed in way that back-end data filegeneration engine can be reused for all Global files (expense reconciliationfiles) with little code change. MyData exposes subset of data found inCornerstone (data lake), American Express' Big Data Platform, for bothinternal and external consumption. MyData is designed to makecustomized data sets available to American Express customers via self-service portal replacing existing legacy system.Good knowledge and worked on Spark SQL, Spark Core topics such asResilient Distributed Dataset (RDD) and Data Frames.
+•Exposure in Spark program performance improvement and tuning of SparkSQL, Hive queries.
+•Worked on improving Hive queries performance by rewriting in Spark.
+•Developed Spark code using java and Spark-SQL for faster testing andprocessing of data.
+•Import data from different sources like HDFS/Hbase into Spark RDD.
+•Migrated all data and tables from Spark 1.2 to Spark 1.4. Created parallelprocess for data all ingestions which uses spark 1.4 and then comparingand validating data to 1.2 there by killing processes in 1.2.
+•Migrated all data and tables from Spark 1.4 to Spark 1.6. Created parallelprocess for data all ingestions which uses spark 1.6 and then comparingand validating data to 1.4 there by killing processes in 1.4
+•Designed HBase tables for time series data. Designed row key to avoidregion hotspotting and accommodate desired read access/querypatterns, used SingleColumnfilter for fast key search across Hbase regions.
+•Integrated real-time streaming technologies for accurate monitoring ofcritical business metrics.
+•
+2015-05 - 2015-09Big Data EngineerComcast, West Chester, PA
+Responsibilities:
+•Experienced in handling large datasets using Partitions, Spark in Memorycapabilities, Broadcasts in Spark, Effective & efficient Joins, Transformationsand others during ingestion process itself.
+•Experienced in performance tuning of Spark Applications for setting rightBatch Interval time, correct level of Parallelism and memory tuning.
+•Developed Spark scripts by using Scala shell commands as per therequirement.
+•Developed Watch Dog scripts to monitor the applications and sendnotifications if required.
+•Proactively involved in tuning the complex Hive queries
+•Developed framework to import and export data from various sources likeTeradata, Oracle, SQL server and Flat-files into HDFS.
+•Extensively used Sqoop to connect with various databases to import datainto Hive.
+•Proactively monitored systems and services, architecture design andimplementation of Hadoop deployment, configuration management,backup, and disaster recovery systems and procedures.
+•
+Designed and developed scalable custom Hadoop solutions as perdynamic data needs.
+•Assisted in designing, development and architecture of Hadoop andHBase systems.
+•Supported technical team members in management and review ofHadoop log files and data backups.
+•Participated in development and execution of system and disasterrecovery processes.
+•Worked on batch processing data using Apache Hadoop, Map Reduceand Apache Pig.
+•
+2014-05 - 2015-04Software EngineerThink Finance, Texas City, TX
+Responsibilities:
+•Extensively used Sqoop to connect with various databases to import datainto Hive.
+•Proactively monitored systems and services, architecture design andimplementation of Hadoop deployment, configuration management,backup, and disaster recovery systems and procedures.
+•Designed and developed scalable custom Hadoop solutions as perdynamic data needs.
+•Assisted in designing, development, and architecture Hadoop and HBasesystems.
+•Supported technical team members in the management and review ofHadoop log files and data backups.
+•Participated in the development and execution of system and disasterrecovery processes.
+•Worked on batch processing data using Apache Hadoop, Map Reduce,and Apache Pig.
+•Experience in using DML statements to perform different operations on HiveTables.
+•Education
+2013-12 - 2015-03Master of Science: Computer EngineeringInternational Technological University - San Jose, CA
+2009-07 - 2012-04Bachelor of Science: Electronics And CommunicationEngineeringVIGNAN'S INSTITUTE oF INFORMATION TECHNOLOGY - VizagAccomplishmentsPatent :A system for automated supplier invoice reconciliation is disclosed. The systemmay receive an order confirmation associated with a purchase order (PO)from a supplier system. The system may receive the PO associated with theorder confirmation from a buyer system. The system may receive a first invoiceassociated with the PO and the order confirmation from the supplier system.
+17041b43-ddfa-4133-a9d4-cc93582265a4#
+
+#HRJ#
+
+The system may reconcile between the PO, the first invoice, and the orderconfirmation to generate a second invoice. The system may pass the secondinvoice to the buyer system.https://patents.justia.com/inventor/amar-petlaCertificationsAI FUNDAMENTALSMicrosoft Certified: Azure Solutions Architect ExpertSnowflake SquadBuilding Business Acumen GraduateSnowflake Snowpark DataFrame Programming2025-07SnowPro Core Certification
