@@ -1,5 +1,10 @@
 # Personal Portfolio
 
+[![Publish (gh-pages branch)](https://github.com/amarpetla/personalportfolio/actions/workflows/gh-pages-branch.yml/badge.svg)](https://github.com/amarpetla/personalportfolio/actions/workflows/gh-pages-branch.yml)
+
+- Live site: https://amarpetla.github.io/personalportfolio/
+
+
 This repository contains a minimal, dark-themed, static personal portfolio site generated from a PDF resume.
 
 ## Structure
