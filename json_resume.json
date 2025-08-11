@@ -7,9 +7,9 @@
   },
   "work": [
     {
-      "name": "Freeport",
+      "name": "Freeport Mcmoran",
       "position": "Staff Engineer",
-      "location": "",
+      "location": "PHOENIX",
       "startDate": "2023-09",
       "endDate": null,
       "summary": "Designed hybrid Snowflake schemas with clustering, materialized views,and Query Acceleration Service (QAS) to optimize performance and cost.",

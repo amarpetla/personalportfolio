@@ -26,8 +26,8 @@
       "start": "2023-09",
       "end": "Current",
       "title": "Staff Engineer",
-      "company": "Freeport",
-      "location": "",
+      "company": "Freeport Mcmoran",
+      "location": "PHOENIX",
       "bullets": [
         "Designed hybrid Snowflake schemas with clustering, materialized views,and Query Acceleration Service (QAS) to optimize performance and cost.",
         "Built ELT pipelines using Azure Data Factory, Snowflake Tasks/Streams, andPython orchestration, ingesting 100M+ daily records from Event Hub, APIs,",

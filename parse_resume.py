@@ -266,7 +266,7 @@ def _trim_company_tokens(company: str) -> str:
     kept = []
     for t in toks:
         # Allow tokens that look like Company Name parts or common suffixes
-        t_stripped = t.strip('()[]{}')
+        t_stripped = t.strip('()[]{}').strip(",.;:-")
         if re.match(r"^[A-Z][A-Za-z0-9&.'-]*$", t_stripped) or t_stripped in COMPANY_KEEP_TOKENS:
             kept.append(t)
         else:
@@ -301,6 +301,14 @@ def derive_company_location(title_line: str) -> Tuple[str, str, str]:
             if len(loc) >= 4 and loc.replace(' ', '').isupper():
                 location = loc
                 head = tl[:tail_city.start()].rstrip(' ,-|')
+        # Fallback 2: ALLCAPS city immediately before a TitleCase word (e.g., "PHOENIX Architected")
+        if not location:
+            near_city = None
+            for m2 in re.finditer(r'([A-Z]{3,})(?=\s+[A-Z][a-z])', tl):
+                near_city = m2
+            if near_city and len(near_city.group(1)) >= 4:
+                location = near_city.group(1)
+                head = tl[:near_city.start()].rstrip(' ,-|')
 
     # Try to extract a title from the start and treat the remainder as company
     title = ''
