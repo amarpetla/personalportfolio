@@ -11,6 +11,8 @@ OUTPUT_RAW = Path('resume/resume_text.txt')
 JSON_RESUME = Path('resume/json_resume.json')
 SITE_JSON = Path('site/parsed_resume.json')
 SITE_JSON_RESUME = Path('site/json_resume.json')
+ROOT_JSON = Path('parsed_resume.json')
+ROOT_JSON_RESUME = Path('json_resume.json')
 
 SECTION_NAME_REGEX = re.compile(r'^[A-Z][A-Z &/+-]{2,}$')
 COMMON_SECTIONS = [
@@ -490,12 +492,14 @@ def main():
     json_resume = build_json_resume(structured, normalized)
     JSON_RESUME.write_text(json.dumps(json_resume, indent=2), encoding='utf-8')
 
-    # Copy into site for static hosting
+    # Copy into site for static hosting and root for GitHub Pages
     try:
         if SITE_JSON.parent.exists():
             SITE_JSON.write_text(OUTPUT_JSON.read_text(encoding='utf-8'), encoding='utf-8')
         if SITE_JSON_RESUME.parent.exists():
             SITE_JSON_RESUME.write_text(JSON_RESUME.read_text(encoding='utf-8'), encoding='utf-8')
+        ROOT_JSON.write_text(OUTPUT_JSON.read_text(encoding='utf-8'), encoding='utf-8')
+        ROOT_JSON_RESUME.write_text(JSON_RESUME.read_text(encoding='utf-8'), encoding='utf-8')
     except Exception as e:
         print(f'Copy to site failed: {e}')
 
