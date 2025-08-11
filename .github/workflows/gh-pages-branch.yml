@@ -33,6 +33,8 @@ jobs:
           cp -R site/* dist/
           cp resume/parsed_resume.json dist/ || true
           cp resume/json_resume.json dist/ || true
+          # Remove custom domain if not configured to avoid redirect
+          rm -f dist/CNAME
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
