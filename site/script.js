@@ -26,10 +26,14 @@ function render(data){
 }
 
 function renderSummary(data){
-  const about = data.SUMMARY || data.PROFILE || data.ABOUT || (Array.isArray(data.UNCLASSIFIED)? data.UNCLASSIFIED.slice(0,1): null);
-  if (about){
-    document.getElementById('about-content').innerHTML = about.map(p=>`<p>${esc(p)}</p>`).join('\n');
-  }
+  // Use SUMMARY or ABOUT or PROFILE or UNCLASSIFIED
+  let aboutArr = data.SUMMARY || data.PROFILE || data.ABOUT || (Array.isArray(data.UNCLASSIFIED)? data.UNCLASSIFIED: []);
+  if (!Array.isArray(aboutArr)) aboutArr = [aboutArr];
+  // Split into summary (first) and profile (rest)
+  const summary = aboutArr.length ? aboutArr[0] : '';
+  const profile = aboutArr.length > 1 ? aboutArr.slice(1).join(' ') : '';
+  document.getElementById('about-summary').innerHTML = summary ? `<p>${esc(summary)}</p>` : '';
+  document.getElementById('about-profile').innerHTML = profile ? `<p>${esc(profile)}</p>` : '';
 }
 
 function renderExperience(data){

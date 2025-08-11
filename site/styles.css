@@ -1,3 +1,9 @@
+/* About Section */
+#about-content { columns: 320px; column-gap:2rem; }
+.about-columns { display:flex; gap:2.5rem; }
+.about-col { flex:1 1 0; min-width:220px; }
+@media (max-width: 700px) { .about-columns { flex-direction:column; gap:1.2rem; } }
+@media (max-width: 700px) { #about-content { columns: 1; } .nav { flex-wrap:wrap; } }
 * { box-sizing: border-box; }
 html, body { margin:0; padding:0; font-family: 'Inter', system-ui, Arial, sans-serif; background:#fff; color:#1a237e; }
 body { line-height:1.6; }
