@@ -43,3 +43,13 @@ main { padding:2rem 0 4rem; }
 .light .more-btn { background:#f0f2f5; border-color:#d0d7de; color:#1b2430; }
 .light .site-footer { background:#ffffff; border-color:#d0d7de; color:#4f5b66; }
 @media (max-width: 700px) { #about-content { columns: 1; } .nav { flex-wrap:wrap; } }
+
+/* Hero */
+.hero { background: linear-gradient(180deg, rgba(26,35,126,0.06), rgba(255,255,255,0)); border-bottom:1px solid #e3e7ee; }
+.hero-inner { padding: 3.2rem 0 2rem; text-align:center; }
+.hero h1 { font-size:2.2rem; margin:0 0 0.25rem; color:#1a237e; }
+.hero p { margin:0 0 1rem; color:#7a869a; font-size:1.05rem; }
+.hero .btn { display:inline-block; margin:0.25rem; padding:0.6rem 0.9rem; border-radius:8px; border:1px solid #d0d7de; background:#e3e7ee; color:#1a237e; font-weight:600; }
+.hero .btn:hover { background:#d0d7de; text-decoration:none; color:#3949ab; }
+.hero .btn.secondary { background:#fff; color:#1a237e; border-color:#e3e7ee; }
+.hero .btn.secondary:hover { background:#e3e7ee; }
