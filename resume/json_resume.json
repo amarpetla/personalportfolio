@@ -32,9 +32,9 @@
       ]
     },
     {
-      "name": "Achieve",
+      "name": "Achieve (Freedom Financial Network",
       "position": "Staff Data Engineer",
-      "location": "",
+      "location": "Tempe, AZ",
       "startDate": "2022-06",
       "endDate": "2023-09",
       "summary": "Designed and implemented Spark-based ETL frameworks and Pythonworkflows, reducing end-to-end pipeline latency by 35% and significantlyimproving SLA compliance.",
@@ -57,9 +57,9 @@
       ]
     },
     {
-      "name": "TXDesign and",
-      "position": "Sr.Bigdata Engineer JPMorgan Chase, Plano",
-      "location": "",
+      "name": "Morgan Chase",
+      "position": "Sr.Bigdata Engineer JP",
+      "location": "Plano, TX",
       "startDate": "2021-12",
       "endDate": "2022-06",
       "summary": "Design and developed recon framework which monitorInbound/outbound dataflow using pyspark.",
@@ -71,9 +71,9 @@
       ]
     },
     {
-      "name": "AZProject: Trinity",
-      "position": "Sr.Big Data Engineer I Solution Architect American Express, Phoenix",
-      "location": "",
+      "name": "American Express",
+      "position": "Sr.Big Data Engineer I Solution Architect",
+      "location": "Phoenix, AZ",
       "startDate": "2015-10",
       "endDate": "2021-11",
       "summary": "This project is joint effort to support seamless electronic solution from BuyerPurchase Order to payment settlement processes for e-Catalog transactionon Marketplaces such as Amazon Business. The requirements within thisdocument are specific to processes among Buyer, Amazon Business andAmerican Expr",
@@ -173,9 +173,9 @@
       "highlights": []
     },
     {
-      "name": "F INFORMATION",
-      "position": "Bachelor of Science: Electronics And Communication Engineering VIGNAN'S INSTITUTE o",
-      "location": "",
+      "name": "o F",
+      "position": "Bachelor of Science: Electronics And Communication Engineering VIGNAN'S INSTITUTE",
+      "location": "INFORMATION",
       "startDate": "2009-07",
       "endDate": "2012-04",
       "summary": "",

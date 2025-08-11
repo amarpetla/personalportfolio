@@ -253,6 +253,8 @@ def _preclean_title_line(s: str) -> str:
     s = re.sub(r'\s+', ' ', s).strip()
     # Insert space where PDF glued words (lowercase followed by Uppercase)
     s = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', s)
+    # Also insert space where an ALLCAPS token is glued to a TitleCase word (e.g., "AZBuilt" -> "AZ Built")
+    s = re.sub(r'([A-Z]{2,})(?=[A-Z][a-z])', r'\1 ', s)
     return s
 
 def _trim_company_tokens(company: str) -> str:
@@ -264,7 +266,8 @@ def _trim_company_tokens(company: str) -> str:
     kept = []
     for t in toks:
         # Allow tokens that look like Company Name parts or common suffixes
-        if re.match(r"^[A-Z][A-Za-z0-9&.'-]*$", t) or t in COMPANY_KEEP_TOKENS:
+        t_stripped = t.strip('()[]{}')
+        if re.match(r"^[A-Z][A-Za-z0-9&.'-]*$", t_stripped) or t_stripped in COMPANY_KEEP_TOKENS:
             kept.append(t)
         else:
             # Stop at first token that clearly looks like sentence continuation (lowercase or punctuation-heavy)
@@ -290,6 +293,14 @@ def derive_company_location(title_line: str) -> Tuple[str, str, str]:
     if loc_match:
         location = loc_match.group(0)
         head = tl[:loc_match.start()].rstrip(' ,-|')
+    else:
+        # Fallback: trailing ALLCAPS city token(s) (e.g., PHOENIX)
+        tail_city = re.search(r'(?:,?\s*)([A-Z]{3,}(?:\s[A-Z]{3,})*)$', tl)
+        if tail_city:
+            loc = tail_city.group(1).strip()
+            if len(loc) >= 4 and loc.replace(' ', '').isupper():
+                location = loc
+                head = tl[:tail_city.start()].rstrip(' ,-|')
 
     # Try to extract a title from the start and treat the remainder as company
     title = ''

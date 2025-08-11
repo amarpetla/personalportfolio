@@ -50,8 +50,8 @@
       "start": "2022-06",
       "end": "2023-09",
       "title": "Staff Data Engineer",
-      "company": "Achieve",
-      "location": "",
+      "company": "Achieve (Freedom Financial Network",
+      "location": "Tempe, AZ",
       "bullets": [
         "Designed and implemented Spark-based ETL frameworks and Pythonworkflows, reducing end-to-end pipeline latency by 35% and significantlyimproving SLA compliance.",
         "Led reengineering of legacy workflows to adopt event-driven architectureusing Kafka and GCP Pub/Sub, enhancing system throughput andresilience.",
@@ -73,9 +73,9 @@
     {
       "start": "2021-12",
       "end": "2022-06",
-      "title": "Sr.Bigdata Engineer JPMorgan Chase, Plano",
-      "company": "TXDesign and",
-      "location": "",
+      "title": "Sr.Bigdata Engineer JP",
+      "company": "Morgan Chase",
+      "location": "Plano, TX",
       "bullets": [
         "Design and developed recon framework which monitorInbound/outbound dataflow using pyspark.",
         "Working on AWS migration from existing platorm (hadoop) to AWS.",
@@ -86,9 +86,9 @@
     {
       "start": "2015-10",
       "end": "2021-11",
-      "title": "Sr.Big Data Engineer I Solution Architect American Express, Phoenix",
-      "company": "AZProject: Trinity",
-      "location": "",
+      "title": "Sr.Big Data Engineer I Solution Architect",
+      "company": "American Express",
+      "location": "Phoenix, AZ",
       "bullets": [
         "This project is joint effort to support seamless electronic solution from BuyerPurchase Order to payment settlement processes for e-Catalog transactionon Marketplaces such as Amazon Business. The requirements within thisdocument are specific to processes among Buyer, Amazon Business andAmerican Express.",
         "",
@@ -184,9 +184,9 @@
     {
       "start": "2009-07",
       "end": "2012-04",
-      "title": "Bachelor of Science: Electronics And Communication Engineering VIGNAN'S INSTITUTE o",
-      "company": "F INFORMATION",
-      "location": "",
+      "title": "Bachelor of Science: Electronics And Communication Engineering VIGNAN'S INSTITUTE",
+      "company": "o F",
+      "location": "INFORMATION",
       "bullets": []
     }
   ],
