@@ -23,8 +23,9 @@ EMBEDDED_HEADINGS = [
 ]
 
 EMAIL_REGEX = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,10}')
-PHONE_REGEX = re.compile(r'(?:\+?1[ -]?)?\(?\d{3}\)?[ -]?\d{3}[ -]?\d{4}')
-LINKEDIN_REGEX = re.compile(r'linkedin\.com/in/[A-Za-z0-9-_/]+', re.IGNORECASE)
+PHONE_REGEX = re.compile(r'(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]?\d{3}[ .-]?\d{4}')
+LINKEDIN_REGEX = re.compile(r'linkedin\.com/(?:in|pub)/[A-Za-z0-9-_/]+', re.IGNORECASE)
+GITHUB_REGEX = re.compile(r'github\.com/[A-Za-z0-9-_/]+', re.IGNORECASE)
 DATE_RANGE_REGEX = re.compile(r'(20\d{2}-\d{2})\s*-\s*(Current|20\d{2}-\d{2})')
 CITY_STATE_REGEX = re.compile(r'([A-Z][A-Za-z .]+),\s*([A-Z]{2})\b')
 
@@ -165,36 +166,64 @@ def secondary_inline_split(sections: Dict[str, List[str]]) -> Dict[str, List[str
 
 # ----------------- Contacts -----------------
 
+def _normalize_phone(match_text: str) -> str:
+    digits = re.sub(r'\D', '', match_text)
+    # Handle leading country code 1
+    if len(digits) == 11 and digits.startswith('1'):
+        digits = digits[1:]
+    if len(digits) == 10:
+        return f"{digits[0:3]}-{digits[3:6]}-{digits[6:10]}"
+    # Fallback: return only digits
+    return digits
+
 def extract_contacts(text: str) -> Dict[str, str]:
     contacts: Dict[str, str] = {}
-    # Extract clean emails (avoid glued URL / phone by re-matching on tokens containing '@')
-    raw_tokens = re.split(r'\s+', text)
-    email_candidates = []
-    for tok in raw_tokens:
-        if '@' in tok:
-            m = EMAIL_REGEX.search(tok)
-            if m:
-                email_candidates.append(m.group(0))
+    # Normalize whitespace and strip common glue characters around tokens
+    cleaned_text = re.sub(r'[\u200b\u200c\u200d]', '', text)
+
+    # Email: prefer token-based exact match to avoid glued noise
+    email_candidates: List[str] = []
+    for tok in re.split(r'\s+', cleaned_text):
+        if '@' not in tok:
+            continue
+        # Trim obvious trailing URL fragments/punctuation
+        tok = tok.strip('.,;:()[]{}<>\'\"')
+        m = EMAIL_REGEX.search(tok)
+        if m:
+            email_candidates.append(m.group(0))
+    if not email_candidates:
+        # Fallback: scan whole text
+        email_candidates = EMAIL_REGEX.findall(cleaned_text)
     if email_candidates:
-        # Deduplicate preserving order
         seen = set()
         dedup = []
         for e in email_candidates:
             if e not in seen:
                 seen.add(e)
                 dedup.append(e)
-        preferred = next((e for e in dedup if 'gmail' in e.lower()), dedup[0])
+        # Prefer common providers to avoid accidental matches
+        preferred = next((e for e in dedup if any(p in e.lower() for p in ['gmail.', 'outlook.', 'yahoo.', 'proton.'])), dedup[0])
         contacts['email'] = preferred
-    phone = PHONE_REGEX.search(text)
-    if phone:
-        num = re.sub(r'[^0-9+]', '', phone.group(0))
-        contacts['phone'] = num
-    li = LINKEDIN_REGEX.search(text)
+
+    # Phone: first valid pattern, normalized to 999-999-9999
+    pm = PHONE_REGEX.search(cleaned_text)
+    if pm:
+        contacts['phone'] = _normalize_phone(pm.group(0))
+
+    # LinkedIn: canonicalize and lowercase
+    li = LINKEDIN_REGEX.search(cleaned_text)
     if li:
         link = li.group(0)
-        if not link.lower().startswith('http'):
-            link = 'https://' + link
-        contacts['linkedin'] = link.lower()
+        link = re.sub(r'^https?://', '', link, flags=re.IGNORECASE)
+        contacts['linkedin'] = 'https://' + link.lower().rstrip('/ ')
+
+    # GitHub (optional)
+    gh = GITHUB_REGEX.search(cleaned_text)
+    if gh:
+        link = gh.group(0)
+        link = re.sub(r'^https?://', '', link, flags=re.IGNORECASE)
+        contacts['github'] = 'https://' + link.rstrip('/ ')
+
     return contacts
 
 # ----------------- Experience -----------------
