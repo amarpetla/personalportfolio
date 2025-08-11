@@ -30,6 +30,11 @@ LINKEDIN_REGEX = re.compile(r'linkedin\.com/(?:in|pub)/[A-Za-z0-9-_/]+', re.IGNO
 GITHUB_REGEX = re.compile(r'github\.com/[A-Za-z0-9-_/]+', re.IGNORECASE)
 DATE_RANGE_REGEX = re.compile(r'(20\d{2}-\d{2})\s*-\s*(Current|20\d{2}-\d{2})')
 CITY_STATE_REGEX = re.compile(r'([A-Z][A-Za-z .]+),\s*([A-Z]{2})\b')
+TITLE_CORE_REGEX = re.compile(
+    r'^(?P<title>(?:(?:Staff|Senior|Sr\.?|Lead|Principal|Software|Big\s*Data|Data|Solutions?|Solution|Platform|Cloud|AI|ML|Machine\s*Learning)\s+)*'
+    r'(?:Engineer|Architect|Developer|Manager|Analyst))\b',
+    re.IGNORECASE
+)
 
 BULLET_PREFIX = '\u2022'
 
@@ -232,29 +237,49 @@ def extract_contacts(text: str) -> Dict[str, str]:
 
 # ----------------- Experience -----------------
 
+def _preclean_title_line(s: str) -> str:
+    s = re.sub(r'\s+', ' ', s).strip()
+    # Insert space where PDF glued words (lowercase followed by Uppercase)
+    s = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', s)
+    return s
+
 def derive_company_location(title_line: str) -> Tuple[str, str, str]:
-    # Try splitting by last city/state pattern
-    city_state = CITY_STATE_REGEX.search(title_line)
-    if city_state:
-        loc = city_state.group(0)
-        before = title_line[:city_state.start()].strip()
-        # Attempt to split before part into title + company
-        parts = before.split()
-        if len(parts) > 2:
-            # Heuristic: last two tokens more likely company words if capitalized
-            title = ' '.join(parts[:2]) if len(parts) < 6 else ' '.join(parts[:-2])
-            company = ' '.join(parts[-2:]) if len(parts) >= 4 else before
+    tl = _preclean_title_line(title_line)
+    # Find the last City, ST occurrence as the location
+    loc_match = None
+    for m in CITY_STATE_REGEX.finditer(tl):
+        loc_match = m
+    location = ''
+    head = tl
+    if loc_match:
+        location = loc_match.group(0)
+        head = tl[:loc_match.start()].rstrip(' ,-|')
+
+    # Try to extract a title from the start and treat the remainder as company
+    title = ''
+    company = ''
+    m = TITLE_CORE_REGEX.search(head)
+    if m:
+        title = _preclean_title_line(m.group('title'))
+        company = head[m.end():].strip(' ,-|')
+    else:
+        # Fallback: split by two or more spaces or by last comma
+        if ',' in head:
+            pre, post = head.rsplit(',', 1)
+            title = pre.strip()
+            company = post.strip()
         else:
-            title = before
-            company = ''
-        return title, company, loc
-    # Fallback comma-based splitting
-    parts = [p.strip() for p in title_line.split(',') if p.strip()]
-    if len(parts) >= 3:
-        return parts[0], parts[1], ', '.join(parts[2:])
-    if len(parts) == 2:
-        return parts[0], parts[1], ''
-    return title_line.strip(), '', ''
+            parts = head.split()
+            if len(parts) > 2:
+                title = ' '.join(parts[:-2])
+                company = ' '.join(parts[-2:])
+            else:
+                title = head
+
+    # Final cleanup
+    title = title.strip(' -|,')
+    company = company.strip(' -|,')
+    return title, company, location
 
 def parse_experience(lines: List[str]) -> List[Dict[str, Any]]:
     experiences: List[Dict[str, Any]] = []

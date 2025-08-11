@@ -25,9 +25,9 @@
     {
       "start": "2023-09",
       "end": "Current",
-      "title": "Staff EngineerFreeport Mcmoran",
-      "company": "PHOENIXArchitected scalable data platforms across Azure",
-      "location": "Snowflake, and GCP, supporting enterprise initiatives including PROD ACCT, FINWIP, HTOS, andHELENA.",
+      "title": "Staff Engineer",
+      "company": "Freeport Mcmoran, PHOENIXArchitected scalable data platforms across Azure, Snowflake, and GCP,supporting enterprise initiatives including PROD ACCT, FINWIP, HTOS, and HELENA.",
+      "location": "",
       "bullets": [
         "Designed hybrid Snowflake schemas with clustering, materialized views,and Query Acceleration Service (QAS) to optimize performance and cost.",
         "Built ELT pipelines using Azure Data Factory, Snowflake Tasks/Streams, andPython orchestration, ingesting 100M+ daily records from Event Hub, APIs,",
@@ -49,9 +49,9 @@
     {
       "start": "2022-06",
       "end": "2023-09",
-      "title": "Staff Data EngineerAchieve (Freedom Financial Network )",
-      "company": "Tempe",
-      "location": "AZBuilt and optimized large-scale data pipelines on GCP, handling 10B+ dailyevents across batch and streaming systems using BigQuery, DataProc, Airflow, and Pub/Sub.",
+      "title": "Staff Data Engineer",
+      "company": "Achieve (Freedom Financial Network ), Tempe, AZBuilt and optimized large-scale data pipelines on GCP, handling 10B+ dailyevents across batch and streaming systems using Big Query, Data Proc,Airflow, and Pub/Sub.",
+      "location": "",
       "bullets": [
         "Designed and implemented Spark-based ETL frameworks and Pythonworkflows, reducing end-to-end pipeline latency by 35% and significantlyimproving SLA compliance.",
         "Led reengineering of legacy workflows to adopt event-driven architectureusing Kafka and GCP Pub/Sub, enhancing system throughput andresilience.",
@@ -73,9 +73,9 @@
     {
       "start": "2021-12",
       "end": "2022-06",
-      "title": "Sr.Bigdata EngineerJPMorgan Chase",
-      "company": "Plano",
-      "location": "TXDesign and Developed Rest API using spring boot where upload customData dictionaries to Collibra-Digital Transformation tool for NoSQLdatabases Using Collibra Spring boot Integration.",
+      "title": "Sr.Bigdata Engineer JPMorgan Chase, Plano",
+      "company": "TXDesign and Developed Rest API using spring boot where upload custom Data dictionaries to Collibra-Digital Transformation tool for No SQLdatabases Using Collibra Spring boot Integration.",
+      "location": "",
       "bullets": [
         "Design and developed recon framework which monitorInbound/outbound dataflow using pyspark.",
         "Working on AWS migration from existing platorm (hadoop) to AWS.",
@@ -86,9 +86,9 @@
     {
       "start": "2015-10",
       "end": "2021-11",
-      "title": "Sr.Big Data Engineer I Solution ArchitectAmerican Express",
-      "company": "Phoenix",
-      "location": "AZProject: Trinity",
+      "title": "Sr.Big Data Engineer I Solution Architect American Express, Phoenix",
+      "company": "AZProject: Trinity",
+      "location": "",
       "bullets": [
         "This project is joint effort to support seamless electronic solution from BuyerPurchase Order to payment settlement processes for e-Catalog transactionon Marketplaces such as Amazon Business. The requirements within thisdocument are specific to processes among Buyer, Amazon Business andAmerican Express.",
         "",
@@ -133,8 +133,8 @@
     {
       "start": "2015-05",
       "end": "2015-09",
-      "title": "Big Data",
-      "company": "Big Data EngineerComcast,",
+      "title": "Big Data Engineer",
+      "company": "Comcast",
       "location": "West Chester, PA",
       "bullets": [
         "Responsibilities:",
@@ -157,8 +157,8 @@
     {
       "start": "2014-05",
       "end": "2015-04",
-      "title": "Software EngineerThink",
-      "company": "Software EngineerThink Finance,",
+      "title": "Software Engineer",
+      "company": "Think Finance",
       "location": "Texas City, TX",
       "bullets": [
         "Responsibilities:",
@@ -176,17 +176,17 @@
     {
       "start": "2013-12",
       "end": "2015-03",
-      "title": "Master of Science: Computer EngineeringInternational Technological",
-      "company": "University -",
+      "title": "Master of Science: Computer Engineering International",
+      "company": "Technological University",
       "location": "San Jose, CA",
       "bullets": []
     },
     {
       "start": "2009-07",
       "end": "2012-04",
-      "title": "Bachelor of Science: Electronics And CommunicationEngineeringVIGNAN'S INSTITUTE oF INFORMATION TECHNOLOGY - VizagAccomplishmentsPatent :A system for automated supplier invoice reconciliation is disclosed. The systemmay receive an order confirmation associated with a purchase order (PO)from a supplier system. The system may receive the PO associated with theorder confirmation from a buyer system. The system may receive a first invoiceassociated with the PO and the order confirmation from the supplier system. 17041b43-ddfa-4133-a9d4-cc93582265a4# #HRJ# The system may reconcile between the PO",
-      "company": "the first invoice",
-      "location": "and the orderconfirmation to generate a second invoice. The system may pass the secondinvoice to the buyer system.https://patents.justia.com/inventor/amar-petlaCertificationsAI FUNDAMENTALSMicrosoft Certified: Azure Solutions Architect ExpertSnowflake SquadBuilding Business Acumen GraduateSnowflake Snowpark DataFrame Programming2025-07SnowPro Core Certification",
+      "title": "Bachelor of Science: Electronics And Communication Engineering VIGNAN'S INSTITUTE o F INFORMATION TECHNOLOGY - Vizag Accomplishments Patent :A system for automated supplier invoice reconciliation is disclosed. The systemmay receive an order confirmation associated with a purchase order (PO)from a supplier system. The system may receive the PO associated with theorder confirmation from a buyer system. The system may receive a first invoiceassociated with the PO and the order confirmation from the supplier system. 17041b43-ddfa-4133-a9d4-cc93582265a4# #HRJ# The system may reconcile between the PO, the first invoice",
+      "company": "and the orderconfirmation to generate a second invoice. The system may pass the secondinvoice to the buyer system.https://patents.justia.com/inventor/amar-petla Certifications AI FUNDAMENTALSMicrosoft Certified: Azure Solutions Architect Expert Snowflake Squad Building Business Acumen Graduate Snowflake Snowpark Data Frame Programming2025-07Snow Pro Core Certification",
+      "location": "",
       "bullets": []
     }
   ],

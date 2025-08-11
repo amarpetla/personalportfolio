@@ -7,9 +7,9 @@
   },
   "work": [
     {
-      "name": "PHOENIXArchitected scalable data platforms across Azure",
-      "position": "Staff EngineerFreeport Mcmoran",
-      "location": "Snowflake, and GCP, supporting enterprise initiatives including PROD ACCT, FINWIP, HTOS, andHELENA.",
+      "name": "Freeport Mcmoran, PHOENIXArchitected scalable data platforms across Azure, Snowflake, and GCP,supporting enterprise initiatives including PROD ACCT, FINWIP, HTOS, and HELENA.",
+      "position": "Staff Engineer",
+      "location": "",
       "startDate": "2023-09",
       "endDate": null,
       "summary": "Designed hybrid Snowflake schemas with clustering, materialized views,and Query Acceleration Service (QAS) to optimize performance and cost.",
@@ -32,9 +32,9 @@
       ]
     },
     {
-      "name": "Tempe",
-      "position": "Staff Data EngineerAchieve (Freedom Financial Network )",
-      "location": "AZBuilt and optimized large-scale data pipelines on GCP, handling 10B+ dailyevents across batch and streaming systems using BigQuery, DataProc, Airflow, and Pub/Sub.",
+      "name": "Achieve (Freedom Financial Network ), Tempe, AZBuilt and optimized large-scale data pipelines on GCP, handling 10B+ dailyevents across batch and streaming systems using Big Query, Data Proc,Airflow, and Pub/Sub.",
+      "position": "Staff Data Engineer",
+      "location": "",
       "startDate": "2022-06",
       "endDate": "2023-09",
       "summary": "Designed and implemented Spark-based ETL frameworks and Pythonworkflows, reducing end-to-end pipeline latency by 35% and significantlyimproving SLA compliance.",
@@ -57,9 +57,9 @@
       ]
     },
     {
-      "name": "Plano",
-      "position": "Sr.Bigdata EngineerJPMorgan Chase",
-      "location": "TXDesign and Developed Rest API using spring boot where upload customData dictionaries to Collibra-Digital Transformation tool for NoSQLdatabases Using Collibra Spring boot Integration.",
+      "name": "TXDesign and Developed Rest API using spring boot where upload custom Data dictionaries to Collibra-Digital Transformation tool for No SQLdatabases Using Collibra Spring boot Integration.",
+      "position": "Sr.Bigdata Engineer JPMorgan Chase, Plano",
+      "location": "",
       "startDate": "2021-12",
       "endDate": "2022-06",
       "summary": "Design and developed recon framework which monitorInbound/outbound dataflow using pyspark.",
@@ -71,9 +71,9 @@
       ]
     },
     {
-      "name": "Phoenix",
-      "position": "Sr.Big Data Engineer I Solution ArchitectAmerican Express",
-      "location": "AZProject: Trinity",
+      "name": "AZProject: Trinity",
+      "position": "Sr.Big Data Engineer I Solution Architect American Express, Phoenix",
+      "location": "",
       "startDate": "2015-10",
       "endDate": "2021-11",
       "summary": "This project is joint effort to support seamless electronic solution from BuyerPurchase Order to payment settlement processes for e-Catalog transactionon Marketplaces such as Amazon Business. The requirements within thisdocument are specific to processes among Buyer, Amazon Business andAmerican Expr",
@@ -119,8 +119,8 @@
       ]
     },
     {
-      "name": "Big Data EngineerComcast,",
-      "position": "Big Data",
+      "name": "Comcast",
+      "position": "Big Data Engineer",
       "location": "West Chester, PA",
       "startDate": "2015-05",
       "endDate": "2015-09",
@@ -144,8 +144,8 @@
       ]
     },
     {
-      "name": "Software EngineerThink Finance,",
-      "position": "Software EngineerThink",
+      "name": "Think Finance",
+      "position": "Software Engineer",
       "location": "Texas City, TX",
       "startDate": "2014-05",
       "endDate": "2015-04",
@@ -164,8 +164,8 @@
       ]
     },
     {
-      "name": "University -",
-      "position": "Master of Science: Computer EngineeringInternational Technological",
+      "name": "Technological University",
+      "position": "Master of Science: Computer Engineering International",
       "location": "San Jose, CA",
       "startDate": "2013-12",
       "endDate": "2015-03",
@@ -173,9 +173,9 @@
       "highlights": []
     },
     {
-      "name": "the first invoice",
-      "position": "Bachelor of Science: Electronics And CommunicationEngineeringVIGNAN'S INSTITUTE oF INFORMATION TECHNOLOGY - VizagAccomplishmentsPatent :A system for automated supplier invoice reconciliation is disclosed. The systemmay receive an order confirmation associated with a purchase order (PO)from a supplier system. The system may receive the PO associated with theorder confirmation from a buyer system. The system may receive a first invoiceassociated with the PO and the order confirmation from the supplier system. 17041b43-ddfa-4133-a9d4-cc93582265a4# #HRJ# The system may reconcile between the PO",
-      "location": "and the orderconfirmation to generate a second invoice. The system may pass the secondinvoice to the buyer system.https://patents.justia.com/inventor/amar-petlaCertificationsAI FUNDAMENTALSMicrosoft Certified: Azure Solutions Architect ExpertSnowflake SquadBuilding Business Acumen GraduateSnowflake Snowpark DataFrame Programming2025-07SnowPro Core Certification",
+      "name": "and the orderconfirmation to generate a second invoice. The system may pass the secondinvoice to the buyer system.https://patents.justia.com/inventor/amar-petla Certifications AI FUNDAMENTALSMicrosoft Certified: Azure Solutions Architect Expert Snowflake Squad Building Business Acumen Graduate Snowflake Snowpark Data Frame Programming2025-07Snow Pro Core Certification",
+      "position": "Bachelor of Science: Electronics And Communication Engineering VIGNAN'S INSTITUTE o F INFORMATION TECHNOLOGY - Vizag Accomplishments Patent :A system for automated supplier invoice reconciliation is disclosed. The systemmay receive an order confirmation associated with a purchase order (PO)from a supplier system. The system may receive the PO associated with theorder confirmation from a buyer system. The system may receive a first invoiceassociated with the PO and the order confirmation from the supplier system. 17041b43-ddfa-4133-a9d4-cc93582265a4# #HRJ# The system may reconcile between the PO, the first invoice",
+      "location": "",
       "startDate": "2009-07",
       "endDate": "2012-04",
       "summary": "",
