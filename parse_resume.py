@@ -36,6 +36,18 @@ TITLE_CORE_REGEX = re.compile(
     re.IGNORECASE
 )
 
+# Detect beginning of descriptive text to cut off from company/title lines
+DESC_CUTOFF_REGEX = re.compile(
+    r'\b(Responsibilities|Achievements|Projects|Technologies|Technology|Summary|Description|Role|Responsibilities:|Built|Implemented|Designed|Led|Responsible|Worked|Developed|Migrated|Modernized|Created|Managed|Mentored|Delivered|Drove)\b',
+    re.IGNORECASE
+)
+
+# Allowed tokens often present in company names; used to keep only the company portion
+COMPANY_KEEP_TOKENS = {
+    '&', 'and', 'of', 'the', 'Inc', 'Inc.', 'LLC', 'Ltd', 'Ltd.', 'Co', 'Co.', 'Corp', 'Corp.', 'Corporation',
+    'Company', 'Technologies', 'Technology', 'Systems', 'Financial', 'Services', 'Bank', 'Solutions', 'Labs', 'Group'
+}
+
 BULLET_PREFIX = '\u2022'
 
 SKILL_GROUP_KEYWORDS = {
@@ -243,8 +255,32 @@ def _preclean_title_line(s: str) -> str:
     s = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', s)
     return s
 
+def _trim_company_tokens(company: str) -> str:
+    # Cut at obvious description starters
+    company = re.split(DESC_CUTOFF_REGEX, company)[0].strip()
+    if not company:
+        return company
+    toks = company.split()
+    kept = []
+    for t in toks:
+        # Allow tokens that look like Company Name parts or common suffixes
+        if re.match(r"^[A-Z][A-Za-z0-9&.'-]*$", t) or t in COMPANY_KEEP_TOKENS:
+            kept.append(t)
+        else:
+            # Stop at first token that clearly looks like sentence continuation (lowercase or punctuation-heavy)
+            break
+    # If we kept nothing (all lowercase?), fallback to original up to first comma/pipe/dash
+    if not kept:
+        kept = re.split(r"[,|\-]", company, 1)[0].split()
+    # Limit overly long companies
+    if len(kept) > 6:
+        kept = kept[:6]
+    return ' '.join(kept).strip("-, |")
+
 def derive_company_location(title_line: str) -> Tuple[str, str, str]:
     tl = _preclean_title_line(title_line)
+    # Cut off any trailing descriptive text early
+    tl = re.split(DESC_CUTOFF_REGEX, tl)[0].strip()
     # Find the last City, ST occurrence as the location
     loc_match = None
     for m in CITY_STATE_REGEX.finditer(tl):
@@ -278,7 +314,7 @@ def derive_company_location(title_line: str) -> Tuple[str, str, str]:
 
     # Final cleanup
     title = title.strip(' -|,')
-    company = company.strip(' -|,')
+    company = _trim_company_tokens(company.strip(' -|,')) if company else ''
     return title, company, location
 
 def parse_experience(lines: List[str]) -> List[Dict[str, Any]]:

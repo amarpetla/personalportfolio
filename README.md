@@ -1,4 +1,16 @@
 # Personal Portfolio
+# Personal Portfolio from Resume
+
+This repo parses a PDF resume into JSON and renders a static portfolio site.
+
+- Live site: https://amarpetla.github.io/personalportfolio/
+- Parsed JSON (root): https://amarpetla.github.io/personalportfolio/parsed_resume.json
+
+Regenerate data locally:
+
+1. Put your PDF at `resume/staff_Amar_Petla.pdf` (or update `PDF_PATH` in `parse_resume.py`).
+2. Run the parser: `python parse_resume.py`
+3. Commit and push to trigger GitHub Pages deploy.
 
 [![Publish (gh-pages branch)](https://github.com/amarpetla/personalportfolio/actions/workflows/gh-pages-branch.yml/badge.svg)](https://github.com/amarpetla/personalportfolio/actions/workflows/gh-pages-branch.yml)
 

@@ -7,7 +7,7 @@
   },
   "work": [
     {
-      "name": "Freeport Mcmoran, PHOENIXArchitected scalable data platforms across Azure, Snowflake, and GCP,supporting enterprise initiatives including PROD ACCT, FINWIP, HTOS, and HELENA.",
+      "name": "Freeport",
       "position": "Staff Engineer",
       "location": "",
       "startDate": "2023-09",
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "name": "Achieve (Freedom Financial Network ), Tempe, AZBuilt and optimized large-scale data pipelines on GCP, handling 10B+ dailyevents across batch and streaming systems using Big Query, Data Proc,Airflow, and Pub/Sub.",
+      "name": "Achieve",
       "position": "Staff Data Engineer",
       "location": "",
       "startDate": "2022-06",
@@ -57,7 +57,7 @@
       ]
     },
     {
-      "name": "TXDesign and Developed Rest API using spring boot where upload custom Data dictionaries to Collibra-Digital Transformation tool for No SQLdatabases Using Collibra Spring boot Integration.",
+      "name": "TXDesign and",
       "position": "Sr.Bigdata Engineer JPMorgan Chase, Plano",
       "location": "",
       "startDate": "2021-12",
@@ -173,8 +173,8 @@
       "highlights": []
     },
     {
-      "name": "and the orderconfirmation to generate a second invoice. The system may pass the secondinvoice to the buyer system.https://patents.justia.com/inventor/amar-petla Certifications AI FUNDAMENTALSMicrosoft Certified: Azure Solutions Architect Expert Snowflake Squad Building Business Acumen Graduate Snowflake Snowpark Data Frame Programming2025-07Snow Pro Core Certification",
-      "position": "Bachelor of Science: Electronics And Communication Engineering VIGNAN'S INSTITUTE o F INFORMATION TECHNOLOGY - Vizag Accomplishments Patent :A system for automated supplier invoice reconciliation is disclosed. The systemmay receive an order confirmation associated with a purchase order (PO)from a supplier system. The system may receive the PO associated with theorder confirmation from a buyer system. The system may receive a first invoiceassociated with the PO and the order confirmation from the supplier system. 17041b43-ddfa-4133-a9d4-cc93582265a4# #HRJ# The system may reconcile between the PO, the first invoice",
+      "name": "F INFORMATION",
+      "position": "Bachelor of Science: Electronics And Communication Engineering VIGNAN'S INSTITUTE o",
       "location": "",
       "startDate": "2009-07",
       "endDate": "2012-04",
