@@ -24,7 +24,7 @@ EMBEDDED_HEADINGS = [
     'SKILLS', 'EXPERIENCE HIGHLIGHTS', 'WORK HISTORY', 'WORK EXPERIENCE', 'EXPERIENCE', 'EDUCATION', 'ACCOMPLISHMENTS', 'CERTIFICATIONS'
 ]
 
-EMAIL_REGEX = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,10}')
+EMAIL_REGEX = re.compile(r'(?<![A-Za-z0-9._%+-])[A-Za-z][A-Za-z0-9._%+-]*@[A-Za-z0-9.-]+\.[A-Za-z]{2,10}\b')
 PHONE_REGEX = re.compile(r'(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]?\d{3}[ .-]?\d{4}')
 LINKEDIN_REGEX = re.compile(r'linkedin\.com/(?:in|pub)/[A-Za-z0-9-_/]+', re.IGNORECASE)
 GITHUB_REGEX = re.compile(r'github\.com/[A-Za-z0-9-_/]+', re.IGNORECASE)
@@ -188,8 +188,10 @@ def extract_contacts(text: str) -> Dict[str, str]:
     for tok in re.split(r'\s+', cleaned_text):
         if '@' not in tok:
             continue
-        # Trim obvious trailing URL fragments/punctuation
+        # Remove leading phone fragments and trailing URL bits
+        tok = re.sub(r'^[0-9+\-().]+', '', tok)
         tok = tok.strip('.,;:()[]{}<>\'\"')
+        tok = re.sub(r'(https?:.*)$', '', tok, flags=re.IGNORECASE)
         m = EMAIL_REGEX.search(tok)
         if m:
             email_candidates.append(m.group(0))
