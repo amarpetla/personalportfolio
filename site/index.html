@@ -20,55 +20,52 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header light-header">
     <div class="container header-inner">
-  <h1 id="site-title">Amar Petla</h1>
-  <button id="theme-toggle" aria-label="Toggle theme">🌗</button>
+      <h1 id="site-title">Amar Petla</h1>
       <nav>
         <ul class="nav">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <button id="theme-toggle" aria-label="Toggle theme">🌗</button>
     </div>
   </header>
   <main class="container">
-    <section id="about" class="panel">
+    <section id="about" class="panel card">
       <h2>About</h2>
       <div id="about-content" class="multicol"></div>
     </section>
-    <section id="downloads" class="panel">
-      <h2>Downloads</h2>
-      <div id="download-links" class="downloads"></div>
-    </section>
-    <section id="experience" class="panel">
+    <section id="experience" class="panel card">
       <h2>Experience</h2>
       <div id="experience-list"></div>
     </section>
-    <section id="projects" class="panel">
-      <h2>Projects</h2>
-      <div id="projects-list"></div>
-    </section>
-    <section id="skills" class="panel">
+    <section id="skills" class="panel card">
       <h2>Skills</h2>
       <ul id="skills-list" class="chips"></ul>
     </section>
-    <section id="education" class="panel">
+    <section id="education" class="panel card">
       <h2>Education</h2>
       <div id="education-list"></div>
     </section>
-    <section id="contact" class="panel">
+    <section id="contact" class="panel card">
       <h2>Contact</h2>
-      <p>Email: <a id="contact-email" href="mailto:"></a></p>
-      <p>LinkedIn: <a id="contact-linkedin" href="#" target="_blank" rel="noopener"></a></p>
-      <p>GitHub: <a id="contact-github" href="#" target="_blank" rel="noopener"></a></p>
+      <div class="contact-icons">
+        <a id="contact-email" href="mailto:"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mail.svg" alt="Email" class="icon" /></a>
+        <a id="contact-linkedin" href="#" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" class="icon" /></a>
+        <a id="contact-github" href="#" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="icon" /></a>
+      </div>
+    </section>
+    <section id="downloads" class="panel card">
+      <h2>Downloads</h2>
+      <div id="download-links" class="downloads"></div>
     </section>
   </main>
-  <footer class="site-footer">&copy; <span id="year"></span> Amar Petla</footer>
+  <footer class="site-footer light-footer">&copy; <span id="year"></span> Amar Petla</footer>
   <script src="script.js"></script>
 </body>
 </html>
