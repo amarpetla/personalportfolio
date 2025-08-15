@@ -18,11 +18,8 @@ function esc(str){return (str||'').replace(/[&<>\"]/g, c=>({'&':'&amp;','<':'&lt
 
 function render(data){
   renderSummary(data);
-  renderExperience(data);
-  renderEducation(data);
-  renderSkills(data);
-  renderCerts(data);
-  renderContact(data);
+    renderSummary(data);
+    // Static HTML is now used for Experience, Projects, Skills, Education, and Contact sections.
 }
 
 function renderSummary(data){
@@ -34,12 +31,7 @@ function renderSummary(data){
 
 function renderExperience(data){
   const target = document.getElementById('experience-list');
-  if (data.EXPERIENCE_STRUCTURED){
-    target.innerHTML = data.EXPERIENCE_STRUCTURED.map(exp=>expItem(exp)).join('\n');
-  } else {
-    const fallback = data['EXPERIENCE'] || data['WORK EXPERIENCE'] || [];
-    target.innerHTML = fallback.map(t=>`<div class="item"><p>${esc(t)}</p></div>`).join('\n');
-  }
+    // Experience section is now static HTML.
 }
 
 function expItem(exp){
@@ -53,26 +45,12 @@ function expItem(exp){
 
 function renderEducation(data){
   const target = document.getElementById('education-list');
-  if (data.EDUCATION_STRUCTURED){
-    target.innerHTML = data.EDUCATION_STRUCTURED.map(e=>`<div class="item"><h3>${esc(e.degree||'')}</h3>${e.institution? `<div class="meta">${esc(e.institution)}</div>`:''}${e.details? `<p>${esc(e.details)}</p>`:''}</div>`).join('\n');
-  } else if (data.EDUCATION){
-    target.innerHTML = data.EDUCATION.map(e=>`<div class="item"><p>${esc(e)}</p></div>`).join('\n');
-  }
+    // Education section is now static HTML.
 }
 
 function renderSkills(data){
   const list = document.getElementById('skills-list');
-  if (data.SKILLS_GROUPED){
-    list.innerHTML = Object.entries(data.SKILLS_GROUPED).map(([group, skills])=>{
-      const chips = skills.slice(0,12).map(s=>`<li>${esc(s)}</li>`).join('');
-      return `<li class="skill-group"><strong>${esc(group)}</strong><ul class="chips subgroup">${chips}</ul></li>`;
-    }).join('\n');
-  } else if (data.SKILLS_FLAT){
-    list.innerHTML = data.SKILLS_FLAT.map(s=>`<li>${esc(s)}</li>`).join('\n');
-  } else {
-    const skills = data.SKILLS || data['TECHNICAL SKILLS'] || [];
-    list.innerHTML = skills.map(s=>`<li>${esc(s)}</li>`).join('\n');
-  }
+    // Skills section is now static HTML.
 }
 
 function renderCerts(data){
@@ -85,21 +63,7 @@ function renderCerts(data){
 }
 
 function renderContact(data){
-  if (!data.CONTACT) return;
-  const c = data.CONTACT;
-  if (c.email){
-    const emailEl = document.getElementById('contact-email');
-    emailEl.textContent = c.email; emailEl.href = `mailto:${c.email}`;
-  } else { document.getElementById('contact-email').parentElement.style.display='none'; }
-  if (c.linkedin){
-    const li = document.getElementById('contact-linkedin');
-    li.textContent = 'LinkedIn'; li.href = c.linkedin;
-  }
-  if (c.github){
-    const gh = document.getElementById('contact-github'); gh.textContent='GitHub'; gh.href=c.github;
-  } else {
-    document.getElementById('contact-github').style.display='none';
-  }
+  // Contact section is now static HTML.
 }
 
 function setupDownloads(){
